@@ -1,0 +1,74 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.loaderRoot {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: grid;
+  place-items: center;
+  background: #fdf6ee;
+  color: #2d1a0e;
+}
+
+.loaderCard {
+  width: min(520px, calc(100vw - 48px));
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(74, 44, 26, 0.12);
+  box-shadow: 0 24px 80px rgba(26, 14, 8, 0.18);
+  backdrop-filter: blur(12px);
+  padding: 26px 24px 22px;
+  text-align: center;
+}
+
+.loaderBrand {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 34px;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.loaderSub {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 18px;
+  opacity: 0.82;
+  margin-bottom: 18px;
+}
+
+.loaderBar {
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f4a0b5, #f0b429, #8ab89a, #9b6b9e, #f2c4b8, #f4a0b5);
+  background-size: 300% 100%;
+  animation: rMove 1.2s linear infinite;
+}
+
+.shell {
+  position: fixed;
+  inset: 0;
+}
+
+.shell iframe {
+  border: 0;
+  width: 100%;
+  height: 100dvh;
+  display: block;
+}
+
+@keyframes rMove {
+  to {
+    background-position: 300% 0;
+  }
+}
+
